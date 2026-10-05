@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ink & Art Tattoo Studio</title>
+    <meta name="description" content="Ink & Art Tattoo Studio: tatuajes personalizados, minimalistas, cover-up y arte en blanco y negro. Agenda tu cita por WhatsApp.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Playball&family=Cinzel:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bestie.css">
+    <link rel="stylesheet" href="cascada2.css">
 </head>
 <body>
+
+    <!-- BANNER SUPERIOR (imagen arriba) -->
+    <div class="banner-top">
+        <img src="imagen2.jpg" alt="Trabajo de tatuaje de Ink & Art">
+        <div class="banner-texto">
+            <strong>Tatuajes hechos a tu medida</strong>
+            <span>Escríbenos por WhatsApp y agenda tu cita</span>
+        </div>
+    </div>
 
     <!-- ENCABEZADO -->
     <header class="header">
@@ -20,17 +31,18 @@
             <a href="#inicio">Inicio</a>
             <a href="#galeria">Galería</a>
             <a href="#servicios">Servicios</a>
+            <a href="#proceso">Proceso</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="inicio">
-    <div class="hero-texto">
-        <h2>Arte en tu piel,<br>Pasión en cada <span>trazo</span></h2>
-        <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20mi%20cita" target="_blank" class="btn">Reserva tu Cita</a>
-    </div>
-</section>
+        <div class="hero-texto">
+            <h2>Arte en tu piel,<br>Pasión en cada <span>trazo</span></h2>
+            <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20mi%20cita" target="_blank" rel="noopener" class="btn">Reserva tu Cita</a>
+        </div>
+    </section>
 
     <!-- GALERÍA -->
     <section class="seccion" id="galeria">
@@ -50,20 +62,63 @@
         <p class="subtitulo">Lo mejor en el arte del tatuaje</p>
         <div class="servicios">
             <div class="servicio">
-                 <div class="foto"><img src="imagen1.jpg" alt="Tatuaje espalda"></div>
+                <div class="foto"><img src="imagen1.jpg" alt="Tatuaje espalda"></div>
                 <h3>Tatuajes Personalizables</h3>
             </div>
             <div class="servicio">
-                <div class="foto"><img src="imagen5.jpg" alt="Tatuaje en mano"></div>
+                <div class="foto"><img src="imagen5.jpg" alt="Tatuaje minimalista"></div>
                 <h3>Diseños Minimalistas</h3>
             </div>
             <div class="servicio">
-               <div class="foto"><img src="tato7.webp" alt="Tatuaje en mano"></div>
+                <div class="foto"><img src="tato7.webp" alt="Cover-up de tatuaje"></div>
                 <h3>Cover-Up de Tatuajes</h3>
             </div>
             <div class="servicio">
-                <div class="foto"><img src="tatu8.jpg" alt="Tatuaje en mano"></div>
+                <div class="foto"><img src="tatu8.jpg" alt="Tatuaje en blanco y negro"></div>
                 <h3>Arte en Blanco & Negro</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section class="seccion" id="porque">
+        <h2 class="titulo">Por qué elegirnos</h2>
+        <p class="subtitulo">Tu piel está en buenas manos</p>
+        <div class="porque">
+            <div class="porque-item">
+                <h3>Higiene total</h3>
+                <p>Agujas nuevas y material descartable en cada sesión.</p>
+            </div>
+            <div class="porque-item">
+                <h3>Diseño a tu medida</h3>
+                <p>Conversamos tu idea y la convertimos en un diseño único.</p>
+            </div>
+            <div class="porque-item">
+                <h3>Te guiamos después</h3>
+                <p>Te explicamos cómo cuidar tu tatuaje para que sane bien.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="seccion" id="proceso">
+        <h2 class="titulo">Cómo agendar</h2>
+        <p class="subtitulo">Es rápido y sencillo</p>
+        <div class="proceso">
+            <div class="paso">
+                <div class="paso-num">1</div>
+                <h3>Escríbenos</h3>
+                <p>Cuéntanos tu idea por WhatsApp y envíanos referencias.</p>
+            </div>
+            <div class="paso">
+                <div class="paso-num">2</div>
+                <h3>Define el diseño</h3>
+                <p>Acordamos tamaño, zona del cuerpo y estilo.</p>
+            </div>
+            <div class="paso">
+                <div class="paso-num">3</div>
+                <h3>Ven a tu sesión</h3>
+                <p>Confirmamos fecha y hora, y tú te llevas tu tatuaje.</p>
             </div>
         </div>
     </section>
@@ -72,18 +127,28 @@
     <section class="seccion" id="contacto">
         <h2 class="titulo">Contáctanos</h2>
         <p class="subtitulo">Agenda tu cita hoy mismo</p>
-        
+        <div class="contacto-botones">
+            <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20mi%20cita" target="_blank" rel="noopener" class="btn btn-wa">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 3C8.83 3 3 8.83 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.94 12.94 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16.003 3zm0 23.7c-2 0-3.96-.54-5.67-1.56l-.41-.24-3.97 1.04 1.06-3.87-.27-.4A10.65 10.65 0 0 1 5.3 16c0-5.9 4.8-10.7 10.7-10.7S26.7 10.1 26.7 16s-4.8 10.7-10.7 10.7zm5.87-8c-.32-.16-1.9-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.32c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"/></svg>
+                Escríbenos por WhatsApp
+            </a>
+        </div>
     </section>
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
-       <div class="redes">
-        <a href="https://www.facebook.com/TU_PAGINA" target="_blank" class="red fb">f</a>
-        <a href="https://www.instagram.com/TU_USUARIO" target="_blank" class="red ig">◎</a>
-        <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" class="red wa">✆</a>
-    </div>
-        <p>© 2026 Ink & Art Tattoo Studio - Todos los derechos reservados :)...</p>
+        <div class="redes">
+            <a href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener" class="red fb" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/TU_USUARIO" target="_blank" rel="noopener" class="red ig" aria-label="Instagram">◎</a>
+            <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="red wa" aria-label="WhatsApp">✆</a>
+        </div>
+        <p>© 2026 Ink & Art Tattoo Studio - Todos los derechos reservados :)</p>
     </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20mi%20cita" target="_blank" rel="noopener" class="wa-flotante" aria-label="Escríbenos por WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 3C8.83 3 3 8.83 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.94 12.94 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16.003 3zm0 23.7c-2 0-3.96-.54-5.67-1.56l-.41-.24-3.97 1.04 1.06-3.87-.27-.4A10.65 10.65 0 0 1 5.3 16c0-5.9 4.8-10.7 10.7-10.7S26.7 10.1 26.7 16s-4.8 10.7-10.7 10.7zm5.87-8c-.32-.16-1.9-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.32c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"/></svg>
+    </a>
 
 </body>
 </html>

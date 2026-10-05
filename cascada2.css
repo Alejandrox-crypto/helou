@@ -1,0 +1,320 @@
+/* ===== MEJORAS Ink & Art (rojo transparente, ordenado) =====
+   Este archivo va ADEMÁS de bestie.css (no lo reemplaza).
+   Para cambiar el rojo, edita --rojo. */
+
+:root {
+    --rojo: 170, 25, 25;          /* color base en formato R, G, B */
+    --acento: #c0392b;
+    --wa: #25d366;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- BANNER SUPERIOR ---------- */
+.banner-top {
+    position: relative;
+    height: clamp(300px, 30vw, 340px);
+    overflow: hidden;
+    background: #000;
+}
+
+.banner-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(0.75) saturate(0.9);
+    display: block;
+}
+
+/* capa: oscura arriba (para el logo), roja transparente en medio,
+   y se funde con el negro de la página abajo */
+.banner-top::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(var(--rojo), 0.30) 40%,
+        rgba(var(--rojo), 0.50) 75%,
+        rgba(10, 0, 0, 0.95) 100%
+    );
+    pointer-events: none;
+}
+
+/* el texto queda DEBAJO del logo y el menú */
+.banner-texto {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 150px 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-texto strong {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.banner-texto span {
+    margin-top: 0.5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------- BANNER SUPERIOR (sin imagen, solo fondo rojo transparente) ---------- */
+.banner-top {
+    position: relative;
+    height: clamp(300px, 30vw, 340px);
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 60%, rgba(var(--rojo), 0.55) 0%, rgba(var(--rojo), 0.25) 45%, transparent 75%),
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(var(--rojo), 0.30) 40%,
+            rgba(var(--rojo), 0.50) 75%,
+            rgba(10, 0, 0, 0.95) 100%
+        ),
+        #0a0000;
+}
+
+/* oculta la imagen del león */
+.banner-top img {
+    display: none;
+}
+
+/* el texto queda DEBAJO del logo y el menú */
+.banner-texto {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 150px 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-texto strong {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.banner-texto span {
+    margin-top: 0.5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------- POR QUÉ ELEGIRNOS (tarjetas rojas transparentes) ---------- */
+.porque {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.3rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+}
+
+.porque-item {
+    padding: 1.6rem 1.4rem;
+    border-radius: 12px;
+    border: 1px solid rgba(var(--rojo), 0.5);
+    border-top: 4px solid var(--acento);
+    background: rgba(var(--rojo), 0.14);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.porque-item:hover {
+    transform: translateY(-5px);
+    background: rgba(var(--rojo), 0.24);
+}
+
+.porque-item h3 {
+    margin: 0 0 0.6rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    color: #fff;
+}
+
+.porque-item p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f0dcdc;
+}
+
+/* ---------- PROCESO (pasos en tarjetas rojas transparentes) ---------- */
+.proceso {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.3rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+}
+
+.paso {
+    padding: 1.6rem 1.4rem;
+    border-radius: 12px;
+    border: 1px solid rgba(var(--rojo), 0.5);
+    background: rgba(var(--rojo), 0.14);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+    background: rgba(var(--rojo), 0.24);
+}
+
+.paso-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 0.9rem;
+    border-radius: 50%;
+    background: rgba(var(--rojo), 0.85);
+    border: 2px solid #ff6b5e;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.paso h3 {
+    margin: 0 0 0.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    color: #fff;
+}
+
+.paso p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f0dcdc;
+}
+
+/* ---------- CONTACTO: botón WhatsApp ---------- */
+.contacto-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.contacto-botones .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contacto-botones .btn-wa {
+    background: var(--wa);
+    border-color: var(--wa);
+    color: #fff;
+}
+
+.contacto-botones .btn-wa:hover {
+    filter: brightness(1.1);
+}
+
+.contacto-botones .btn-wa svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* ---------- WHATSAPP FLOTANTE ---------- */
+.wa-flotante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--wa);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    animation: wa-pulso 2.2s infinite;
+    transition: transform 0.2s ease;
+}
+
+.wa-flotante svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+}
+
+.wa-flotante:hover {
+    transform: scale(1.1);
+}
+
+.wa-flotante:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+@keyframes wa-pulso {
+    0%   { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70%  { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 0 18px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .wa-flotante { animation: none; }
+    .porque-item, .paso,
+    .galeria .foto img,
+    .servicios .foto img { transition: none; }
+}
+
+/* ---------- CELULAR ---------- */
+@media (max-width: 700px) {
+    .banner-top {
+        height: 360px;
+    }
+    .banner-texto {
+        padding-top: 190px;
+    }
+    .wa-flotante {
+        right: 14px;
+        bottom: 14px;
+        width: 56px;
+        height: 56px;
+    }
+}
