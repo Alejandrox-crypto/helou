@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #f2e8e0;
+    background:
+        radial-gradient(circle at 0% 30%, rgba(160, 30, 10, 0.35), transparent 40%),
+        radial-gradient(circle at 100% 60%, rgba(160, 30, 10, 0.35), transparent 40%),
+        radial-gradient(circle at 0% 90%, rgba(120, 25, 10, 0.4), transparent 40%),
+        #0b0707;
+    background-attachment: fixed;
+}
+
+/* ---------- ENCABEZADO ---------- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 20px;
+    z-index: 10;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo h1 {
+    font-family: 'Pirata One', cursive;
+    font-size: 64px;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 3px 3px 0 #b30000, 0 0 15px rgba(200, 0, 0, 0.6);
+}
+
+.logo h1 span {
+    color: #4aa3ff;
+    font-size: 48px;
+}
+
+.logo p {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #f0d9a8;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff3b2f;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 160px 20px 80px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+        url('img/hero.jpg') center / cover no-repeat,
+        radial-gradient(circle at 20% 50%, #5a1208, #0b0707 70%);
+    border-bottom: 3px solid #3a1a14;
+}
+
+.hero-texto h2 {
+    font-family: 'Playball', cursive;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px #000;
+    margin-bottom: 30px;
+}
+
+.hero-texto h2 span {
+    color: #e01b0f;
+}
+
+/* ---------- BOTONES ---------- */
+.btn {
+    display: inline-block;
+    background: linear-gradient(#d4201a, #8f0e0a);
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 12px 40px;
+    border: 1px solid #ff5a4d;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(200, 20, 10, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(255, 40, 20, 0.7);
+}
+
+/* ---------- SECCIONES ---------- */
+.seccion {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 55px 20px 25px;
+    text-align: center;
+}
+
+.titulo {
+    font-family: 'Playball', cursive;
+    font-size: 42px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.titulo::before,
+.titulo::after {
+    content: "〰";
+    color: #7a5a4a;
+    font-size: 26px;
+    margin: 0 15px;
+}
+
+.subtitulo {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 5px 0 30px;
+}
+
+/* ---------- GALERÍA ---------- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.foto {
+    height: 210px;
+    border: 1px solid #4a3027;
+    background: linear-gradient(160deg, #3a1710, #0e0807);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+}
+
+/* ---------- SERVICIOS ---------- */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.servicio {
+    background: rgba(10, 8, 8, 0.85);
+    border: 1px solid #3a2a24;
+    padding: 20px 10px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.servicio:hover {
+    border-color: #c0261b;
+    transform: translateY(-5px);
+}
+
+.icono {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.servicio h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    color: #f0d9a8;
+}
+
+/* ---------- FORMULARIO ---------- */
+.formulario {
+    max-width: 410px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    background: rgba(8, 6, 6, 0.9);
+    border: 1px solid #3a2a24;
+    color: #fff;
+    padding: 12px;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    resize: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #c0261b;
+}
+
+.formulario .btn {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+/* ---------- PIE ---------- */
+.footer {
+    text-align: center;
+    padding: 40px 20px 25px;
+    font-size: 12px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.red {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.fb { background: #1877f2; }
+.ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+.wa { background: #25d366; }
+
+/* ---------- RESPONSIVE (celular) ---------- */
+@media (max-width: 800px) {
+    .header { flex-direction: column; gap: 10px; }
+    .logo h1 { font-size: 46px; }
+    .hero-texto h2 { font-size: 36px; }
+    .galeria, .servicios { grid-template-columns: repeat(2, 1fr); }
+    .titulo::before, .titulo::after { display: none; }
+}
+/* Galería sin fotos: muestra emoji de respaldo */
+.foto {
+    position: relative;
+}
+
+.foto img {
+    position: relative;
+    z-index: 2;
+    color: transparent;        /* oculta el texto alt */
+    font-size: 0;
+}
+
+.foto::after {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.foto:nth-child(1)::after { content: "🖋️"; }
+.foto:nth-child(2)::after { content: "💀"; }
+.foto:nth-child(3)::after { content: "☠️"; }
+.foto:nth-child(4)::after { content: "🌹"; }
