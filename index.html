@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ink & Art Tattoo Studio</title>
-    <meta name="description" content="Ink & Art Tattoo Studo: tatuajes personalizados, minimalistas, cover-up y arte en blanco y negro. Agenda tu cita por WhatsApp.">
+    <meta name="description" content="Ink & Art Tattoo Studio: tatuajes personalizados, minimalistas, cover-up y arte en blanco y negro. Agenda tu cita por WhatsApp.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Playball&family=Cinzel:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bestie.css">
@@ -12,16 +12,7 @@
 </head>
 <body>
 
-    <!-- BANNER SUPERIOR (imagen arriba) -->
-        <div class="banner-top">
-    <img src="tatu8.jpg" alt="Tatuaje" class="banner-flotante">
-    <div class="banner-texto">
-        <strong>Tatuajes hechos a tu medida</strong>
-        <span>Escríbenos por WhatsApp y agenda tu cita</span>
-    </div>
-</div>
-
-    <!-- ENCABEZADO -->
+    <!-- ENCABEZADO (fijo arriba) -->
     <header class="header">
         <div class="logo">
             <h1>Ink <span>&</span> Art</h1>
@@ -31,10 +22,20 @@
             <a href="#inicio">Inicio</a>
             <a href="#galeria">Galería</a>
             <a href="#servicios">Servicios</a>
+            <a href="#porque">Nosotros</a>
             <a href="#proceso">Proceso</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
+
+    <!-- BANNER -->
+    <div class="banner-top">
+        <img src="tatu8.jpg" alt="Tatuaje" class="banner-flotante">
+        <div class="banner-texto">
+            <strong>Tatuajes hechos a tu medida</strong>
+            <span>Escríbenos por WhatsApp y agenda tu cita</span>
+        </div>
+    </div>
 
     <!-- HERO -->
     <section class="hero" id="inicio">
@@ -49,10 +50,10 @@
         <h2 class="titulo">Nuestra Galería</h2>
         <p class="subtitulo">Explora nuestros mejores trabajos</p>
         <div class="galeria">
-            <div class="foto"><img src="imagen1.jpg" alt="Tatuaje espalda"></div>
-            <div class="foto"><img src="imagen2.jpg" alt="Calavera realista"></div>
-            <div class="foto"><img src="imagen3.jpg" alt="Calavera samurái"></div>
-            <div class="foto"><img src="imagen4.png" alt="Tatuaje en mano"></div>
+            <div class="foto"><img src="imagen1.jpg" alt="Tatuaje espalda" loading="lazy"></div>
+            <div class="foto"><img src="imagen2.jpg" alt="Calavera realista" loading="lazy"></div>
+            <div class="foto"><img src="imagen3.jpg" alt="Calavera samurái" loading="lazy"></div>
+            <div class="foto"><img src="imagen4.png" alt="Tatuaje en mano" loading="lazy"></div>
         </div>
     </section>
 
@@ -62,19 +63,19 @@
         <p class="subtitulo">Lo mejor en el arte del tatuaje</p>
         <div class="servicios">
             <div class="servicio">
-                <div class="foto"><img src="imagen1.jpg" alt="Tatuaje espalda"></div>
+                <div class="foto"><img src="imagen1.jpg" alt="Tatuaje espalda" loading="lazy"></div>
                 <h3>Tatuajes Personalizables</h3>
             </div>
             <div class="servicio">
-                <div class="foto"><img src="imagen5.jpg" alt="Tatuaje minimalista"></div>
+                <div class="foto"><img src="imagen5.jpg" alt="Tatuaje minimalista" loading="lazy"></div>
                 <h3>Diseños Minimalistas</h3>
             </div>
             <div class="servicio">
-                <div class="foto"><img src="tato7.webp" alt="Cover-up de tatuaje"></div>
+                <div class="foto"><img src="tato7.webp" alt="Cover-up de tatuaje" loading="lazy"></div>
                 <h3>Cover-Up de Tatuajes</h3>
             </div>
             <div class="servicio">
-                <div class="foto"><img src="tatu8.jpg" alt="Tatuaje en blanco y negro"></div>
+                <div class="foto"><img src="tatu8.jpg" alt="Tatuaje en blanco y negro" loading="lazy"></div>
                 <h3>Arte en Blanco & Negro</h3>
             </div>
         </div>
@@ -137,12 +138,30 @@
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Ink & Art Tattoo Studio</h4>
+                <p>Tatuajes personalizados, minimalistas, cover-up y arte en blanco y negro.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <a href="#galeria">Galería</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Cómo agendar</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">WhatsApp: +51 902 594 148</a>
+            </div>
+        </div>
+
         <div class="redes">
             <a href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener" class="red fb" aria-label="Facebook">f</a>
             <a href="https://www.instagram.com/TU_USUARIO" target="_blank" rel="noopener" class="red ig" aria-label="Instagram">◎</a>
             <a href="https://wa.me/51902594148?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="red wa" aria-label="WhatsApp">✆</a>
         </div>
-        <p>© 2026 Ink & Art Tattoo Studio - Todos los derechos reservados :)</p>
+        <p class="footer-copy">© 2026 Ink & Art Tattoo Studio - Todos los derechos reservados</p>
     </footer>
 
     <!-- WHATSAPP FLOTANTE -->
