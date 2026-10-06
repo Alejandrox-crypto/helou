@@ -332,9 +332,22 @@ body {
 }
 
 /* en pantallas pequeñas se oculta para que no tape el texto */
+/* ---------- CELULAR Y TABLET: imagen más pequeña, abajo a la derecha ---------- */
 @media (max-width: 900px) {
     .banner-top .banner-flotante {
-        display: none;
+        width: 90px;
+        height: 110px;
+        right: 14px;
+        top: auto;
+        bottom: 18px;
+        margin-top: 0;
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+    .banner-texto {
+        padding-right: 120px;
+        padding-left: 1rem;
     }
 }
 
